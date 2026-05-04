@@ -1,8 +1,17 @@
-# 🚀 Projeto Laravel - Curso Professor João Ribeiro
+# 🚀 Projeto Laravel - Sistema de Posts com Gates
+
+## About The Project
 
 Este projeto foi desenvolvido durante o curso do professor João Ribeiro, utilizando o framework Laravel com ambiente totalmente containerizado via Docker e Laravel Sail.
 
-O objetivo é praticar conceitos modernos de desenvolvimento backend com PHP, organização de projeto e ambiente de desenvolvimento padronizado.
+A aplicação consiste em um sistema de **criação e gerenciamento de posts**, com foco principal na implementação de **controle de acesso utilizando Gates do Laravel**.
+
+O objetivo é praticar conceitos modernos de desenvolvimento backend com PHP, incluindo:
+
+- Organização de projeto
+- Controle de permissões com Gates
+- Boas práticas no Laravel
+- Ambiente de desenvolvimento padronizado com Docker
 
 ---
 
@@ -18,60 +27,17 @@ O objetivo é praticar conceitos modernos de desenvolvimento backend com PHP, or
 
 ---
 
-## ⚙️ Ambiente de Desenvolvimento
-
-O projeto utiliza Laravel Sail, que é uma interface leve para trabalhar com Docker no Laravel.
-
----
-
-## 📦 Estrutura dos Containers
-
-O ambiente é composto por:
-
-- app (laravel.test) → aplicação Laravel
-- mysql → banco de dados
-- phpmyadmin → interface web para gerenciamento do banco
-
----
-
-## 🚀 Como executar o projeto
-
-### 1. Clone o repositório
+## ⚙️ Como executar o projeto
 
 ```bash
 git clone <seu-repositorio>
 cd <nome-do-projeto>
-```
 
-### 2. Instale as dependências
-
-```bash
 composer install
-```
-
-### 3. Configure o ambiente
-
-Copie o arquivo `.env`:
-
-```bash
 cp .env.example .env
-```
 
-### 4. Suba os containers com Sail
-
-```bash
 ./vendor/bin/sail up -d
-```
-
-### 5. Gere a chave da aplicação
-
-```bash
 ./vendor/bin/sail artisan key:generate
-```
-
-### 6. Execute as migrations
-
-```bash
 ./vendor/bin/sail artisan migrate
 ```
 
@@ -80,91 +46,13 @@ cp .env.example .env
 ## 🌐 Acessos
 
 - Aplicação: http://localhost
-- Vite (frontend): http://localhost:5173
 - phpMyAdmin: http://localhost:8080
 
 ---
 
-## 🗄️ Banco de Dados
+## 📚 Objetivo
 
-Configuração padrão via `.env`:
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=sail
-DB_PASSWORD=password
-```
-
----
-
-## 🐳 Docker Compose
-
-Principais serviços configurados:
-
-### 🔹 App (Laravel + Sail)
-
-- Porta: 80
-- Hot reload com Vite
-- Volume sincronizado com o projeto local
-
-### 🔹 MySQL
-
-- Versão: 8.4
-- Volume persistente (sail-mysql)
-
-### 🔹 phpMyAdmin
-
-- Porta: 8080
-- Conectado automaticamente ao MySQL
-
----
-
-## 📌 Comandos úteis
-
-Subir containers:
-
-```bash
-./vendor/bin/sail up -d
-```
-
-Parar containers:
-
-```bash
-./vendor/bin/sail down
-```
-
-Acessar container:
-
-```bash
-./vendor/bin/sail shell
-```
-
-Rodar artisan:
-
-```bash
-./vendor/bin/sail artisan <comando>
-```
-
-Rodar npm:
-
-```bash
-./vendor/bin/sail npm run dev
-```
-
----
-
-## 📚 Aprendizados
-
-Durante o desenvolvimento deste projeto foram praticados:
-
-- Estrutura do Laravel
-- Uso do Docker no desenvolvimento
-- Configuração de ambiente com Sail
-- Integração com banco de dados MySQL
-- Uso de migrations e artisan
+Praticar o uso de **Gates no Laravel** para controle de autorização em ações como criação, edição e exclusão de posts.
 
 ---
 
@@ -176,4 +64,4 @@ Diego Ferraz
 
 ## 📄 Licença
 
-Este projeto é apenas para fins educacionais.
+Projeto para fins educacionais.
