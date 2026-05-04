@@ -1,58 +1,108 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Aqui vai um README profissional e bem organizado pro seu projeto 👇
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+🚀 Projeto Laravel - Curso Professor João Ribeiro
 
-## About Laravel
+Este projeto foi desenvolvido durante o curso do professor João Ribeiro, utilizando o framework Laravel com ambiente totalmente containerizado via Docker e Laravel Sail.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+O objetivo é praticar conceitos modernos de desenvolvimento backend com PHP, organização de projeto e ambiente de desenvolvimento padronizado.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+🧰 Tecnologias Utilizadas
+PHP 8.5
+Laravel
+Docker
+Docker Compose
+Laravel Sail
+MySQL 8.4
+phpMyAdmin
+⚙️ Ambiente de Desenvolvimento
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+O projeto utiliza Laravel Sail, que é uma interface leve para trabalhar com Docker no Laravel.
 
-## Learning Laravel
+📦 Estrutura dos Containers
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+O ambiente é composto por:
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+app (laravel.test) → aplicação Laravel
+mysql → banco de dados
+phpmyadmin → interface web para gerenciamento do banco
+🚀 Como executar o projeto
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+1. Clone o repositório
+   git clone <seu-repositorio>
+   cd <nome-do-projeto>
+2. Instale as dependências
+   composer install
+3. Configure o ambiente
 
-## Agentic Development
+Copie o arquivo .env:
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+cp .env.example .env 4. Suba os containers com Sail
+./vendor/bin/sail up -d 5. Gere a chave da aplicação
+./vendor/bin/sail artisan key:generate 6. Execute as migrations
+./vendor/bin/sail artisan migrate
+🌐 Acessos
+Aplicação: http://localhost
+Vite (frontend): http://localhost:5173
+phpMyAdmin: http://localhost:8080
+🗄️ Banco de Dados
 
-```bash
-composer require laravel/boost --dev
+Configuração padrão via .env:
 
-php artisan boost:install
-```
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=sail
+DB_PASSWORD=password
+🐳 Docker Compose
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Principais serviços configurados:
 
-## Contributing
+🔹 App (Laravel + Sail)
+Porta: 80
+Hot reload com Vite
+Volume sincronizado com o projeto local
+🔹 MySQL
+Versão: 8.4
+Volume persistente (sail-mysql)
+🔹 phpMyAdmin
+Porta: 8080
+Conectado automaticamente ao MySQL
+📌 Comandos úteis
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Subir containers:
 
-## Code of Conduct
+./vendor/bin/sail up -d
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Parar containers:
 
-## Security Vulnerabilities
+./vendor/bin/sail down
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Acessar container:
 
-## License
+./vendor/bin/sail shell
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Rodar artisan:
+
+./vendor/bin/sail artisan <comando>
+
+Rodar npm:
+
+./vendor/bin/sail npm run dev
+📚 Aprendizados
+
+Durante o desenvolvimento deste projeto foram praticados:
+
+Estrutura do Laravel
+Uso do Docker no desenvolvimento
+Configuração de ambiente com Sail
+Integração com banco de dados MySQL
+Uso de migrations e artisan
+
+🧑‍💻 Autor
+
+Diego Ferraz.
+
+📄 Licença
+
+Este projeto é apenas para fins educacionais.
