@@ -1,5 +1,3 @@
-Aqui vai um README profissional e bem organizado pro seu projeto 👇
-
 🚀 Projeto Laravel - Curso Professor João Ribeiro
 
 Este projeto foi desenvolvido durante o curso do professor João Ribeiro, utilizando o framework Laravel com ambiente totalmente containerizado via Docker e Laravel Sail.
